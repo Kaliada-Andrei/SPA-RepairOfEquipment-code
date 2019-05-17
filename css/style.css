@@ -1,3 +1,35 @@
+@font-face {
+  font-family: 'FiraSans-Book';
+  src: url(/fonts/FiraSans-Book.ttf);
+}
+
+@font-face {
+  font-family: 'FiraSans-Heavy';
+  src: url(/fonts/FiraSans-Heavy.ttf);
+}
+
+@font-face {
+  font-family: 'FiraSans-Bold';
+  src: url(/fonts/FiraSans-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'FiraSans-Medium';
+  src: url(/fonts/FiraSans-Medium.ttf);
+}
+
+.popUpBg {
+  width: 100%;
+  min-height: 100%;
+  position: fixed;
+  top: 0;
+  background: rgba(38, 38, 38, 0.6);
+  z-index: 999;
+  opacity: 1;
+  -webkit-transition: 0.2s linear all;
+  transition: 0.2s linear all;
+}
+
 .header-wrapper {
   margin-top: 20px;
   display: -webkit-box;
@@ -20,7 +52,7 @@ nav ul li {
 }
 
 nav ul li a {
-  font-size: 16px;
+  font: 20px 'FiraSans-Book', sans-serif;
   color: #4d4d4d;
   text-decoration: none;
 }
@@ -30,22 +62,158 @@ nav ul li a:hover {
 }
 
 .callNum {
+  font: 18px 'FiraSans-Heavy', sans-serif;
   margin-top: 15px;
   font-weight: bold;
 }
 
 .btnCall {
   display: block;
+  text-align: center;
   background: url(/img/btnCall.png) no-repeat;
   width: 200px;
   height: 50px;
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   border: 0;
   border-radius: 50px 50px 50px 50px;
 }
 
 .btnCall:hover {
-  opacity: 0.8;
+  opacity: 0.9;
+  text-decoration: none;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.btnCall span {
+  display: block;
+  padding-top: 12px;
+  color: #fff;
+  font: 20px 'FiraSans-Book', sans-serif;
+}
+
+.pop-app {
+  width: 450px;
+  height: 480px;
+  background-color: #fff;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  opacity: 1;
+  -webkit-transition: 0.2s linear all;
+  transition: 0.2s linear all;
+}
+
+.pop-app h2 {
+  margin-top: 20px;
+  font: 40px 'FiraSans-Bold', sans-serif;
+}
+
+.pop-app .formMessage input {
+  width: 425px;
+  height: 40px;
+  margin-top: 15px;
+  border: 1px solid #e7e7e7;
+  border-radius: 50px 50px 50px 50px;
+  text-decoration: none;
+  padding-left: 10px;
+  color: #808080;
+  outline: none;
+  font: 16px 'FiraSans-Medium', sans-serif;
+}
+
+.pop-app .formMessage input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
+.pop-app .formMessage textarea {
+  width: 425px;
+  max-height: 100px;
+  margin-top: 20px;
+  border: 1px solid #e7e7e7;
+  border-radius: 30px 30px 30px 30px;
+  text-decoration: none;
+  padding-top: 10px;
+  padding-left: 15px;
+  color: #808080;
+  font: 16px 'FiraSans-Medium', sans-serif;
+  outline: none;
+}
+
+.pop-app .formMessage .invalidForm span {
+  color: red;
+  display: block;
+}
+
+.pop-app .formMessage .sendMessage {
+  display: block;
+  width: 385px;
+  height: 50px;
+  background: url(/img/btnSendMessagePopUp.png) no-repeat;
+  text-align: center;
+  margin: 20px 0 0 35px;
+  text-decoration: none;
+  border-radius: 50px 50px 50px 50px;
+  border: 0;
+  outline: none;
+}
+
+.pop-app .formMessage .sendMessage[disabled="disabled"] {
+  opacity: 0.4;
+  cursor: not-allowed !important;
+}
+
+.pop-app .formMessage .sendMessage:hover {
+  text-decoration: none;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.pop-app .formMessage .sendMessage span {
+  display: block;
+  color: #fff;
+  font: 20px 'FiraSans-Book', sans-serif;
+}
+
+.modal-wrapper {
+  position: fixed;
+  z-index: 999;
+}
+
+.modal-wrapper a {
+  text-decoration: none;
+}
+
+.modal-wrapper .closePopUp {
+  position: absolute;
+  top: -40px;
+  right: -30px;
+  cursor: pointer;
+}
+
+.modal-wrapper .closePopUp:hover {
+  opacity: 0.7;
+}
+
+.ng-hide {
+  -webkit-transition: 0.2s linear all;
+  transition: 0.2s linear all;
+  opacity: 0;
+}
+
+main.ng-enter {
+  -webkit-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+  opacity: 0;
+}
+
+main.ng-enter.ng-enter-active {
+  opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */

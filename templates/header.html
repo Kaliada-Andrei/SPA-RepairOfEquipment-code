@@ -1,30 +1,35 @@
-<header>
+<header ng-controller="headerController">
+    <div class="popUpBg" ng-show="popUp"></div>
     <div class="container">
-                <div class="row header-wrapper">
-                    <div class="col-md-1">
-                        <a href="#" ><img src="img/logo.png" alt="logo" ></a>
-                    </div>
-                    <div class="col-xl-5">
-                        <nav>
-                            <ul>
-                                <li><a href="">Акции</a></li>
-                                <li><a href="">Горантии</a></li>
-                                <li><a href="">Доставка</a></li>
-                                <li><a href="">Сотрудничество</a></li>
-                                <li><a href="">Контакты</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-
-                    <div class="col-md-1 language">
-                        <a href="">Ru</a> &frasl; <a href="">En</a>
-                    </div>
-                    <div class="col-md-2 callNum">
-                        <p>+7 (495) 107-03-25</p>
-                    </div>
-                    <div class="col-md-3">
-                            <a href="#" class="btnCall" ></a>
-                    </div>
-                </div>
+        <div class="row header-wrapper">
+            <div class="col-md-1">
+                <a href="#"><img src="img/logo.png" alt="logo"></a>
             </div>
+            <div class="col-md-6">
+                <nav>
+                    <ul>
+                        <li><a href="#!promotions">Promotions</a></li>
+                        <li><a href="#!guarantees">Guarantees</a></li>
+                        <li><a href="#!delivery">Delivery</a></li>
+                        <li><a href="#!cooperation">Cooperation</a></li>
+                        <li><a href="#!contacts">Contacts</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-xl-2 callNum">
+                <p>+7 (495) 107-03-25</p>
+            </div>
+            <div class="col">
+                <a href="#" class="btnCall" ng-click="showCall()"><span>Request a call</span></a>
+            </div>
+        </div>
+        <div class="row justify-content-md-center">
+            <div class="modal-wrapper">
+                <div class="closePopUp">
+                    <img src="/img/imgClosePopUp.png" ng-click="closePopUp()" alt="imgClosePopUp" ng-show="popUp">
+                </div>
+                <form-directive></form-directive>
+            </div>
+        </div>
+    </div>
 </header>
