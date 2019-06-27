@@ -1,0 +1,44 @@
+.content{
+    .descriptionText{
+        h1{
+            font:40px 'FiraSans-Bold',sans-serif;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        ul{
+            margin-top: 40px;
+        }
+
+        .descriptionImg{
+            li{
+                display:flex;
+                img{
+                    padding: 10px 0 10px 0;
+                }
+                p{
+                    font: 20px 'FiraSans-Bold', sans-serif;
+                    color:#4c4c4c;
+                    padding: 10px 0 0 10px;
+                }
+            }
+        }
+
+    }
+    .backPhone{
+        position: relative;
+        z-index: -1;
+        top: -70px;
+        background: url('/img/backImage.png') no-repeat;
+        //width: 677px;
+        width: 1580px;
+        height: 845px;
+    }
+
+    
+}
+
+
+
+
+  

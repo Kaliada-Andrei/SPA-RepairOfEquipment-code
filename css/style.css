@@ -18,6 +18,21 @@
   src: url(/fonts/FiraSans-Medium.ttf);
 }
 
+@font-face {
+  font-family: 'FiraSans-Light';
+  src: url(/fonts/FiraSans-Light.ttf);
+}
+
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body p {
+  font: 20px "FiraSans-Light", sans-serif;
+}
+
 .popUpBg {
   width: 100%;
   min-height: 100%;
@@ -208,12 +223,310 @@ nav ul li a:hover {
 }
 
 main.ng-enter {
-  -webkit-transition: 0.5s linear all;
-  transition: 0.5s linear all;
+  -webkit-transition: 0.2s linear all;
+  transition: 0.2s linear all;
   opacity: 0;
 }
 
 main.ng-enter.ng-enter-active {
   opacity: 1;
+}
+
+.smallBtnMenu {
+  display: none;
+  background: url(/img/smallBtnMenu.png) no-repeat;
+  width: 40px;
+  height: 40px;
+}
+
+.smallBtnMenu .menu-btn {
+  display: block;
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.smallBtnMenu .menu-btn span {
+  position: absolute;
+  top: 50%;
+  margin-top: -1px;
+  left: 50%;
+  margin-left: -10px;
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+}
+
+.smallBtnMenu .menu-btn span::before {
+  content: '';
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  position: absolute;
+  top: 50%;
+  margin-top: -1px;
+  left: 50%;
+  margin-left: -10px;
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+  display: block;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.smallBtnMenu .menu-btn span::after {
+  content: '';
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+  position: absolute;
+  top: 50%;
+  margin-top: -1px;
+  left: 50%;
+  margin-left: -10px;
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+  display: block;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.smallBtnMenu .menu-btn-active span {
+  height: 0;
+}
+
+.smallBtnMenu .menu-btn-active span::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.smallBtnMenu .menu-btn-active span::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+@media (max-width: 991.98px) {
+  .bgMenu {
+    display: none;
+  }
+  .header-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .header-wrapper .smallBtnMenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .header-wrapper .btnCall {
+    display: none;
+  }
+  .header-wrapper .navigation {
+    display: none;
+  }
+}
+
+.bgMenu {
+  height: 70px;
+  background-color: #ff6402;
+  margin-top: 10px;
+}
+
+.bgMenu .wrapper-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.bgMenu .wrapper-menu div {
+  z-index: 2;
+}
+
+.bgMenu .wrapper-menu .menuProducts .listPhones {
+  display: none;
+}
+
+.bgMenu .wrapper-menu .menuProducts .listPhones a {
+  width: 150px;
+  height: 15px;
+  text-align: center;
+  padding: 10px 0;
+  font: 18px;
+  color: #4c4c4c;
+}
+
+.bgMenu .wrapper-menu .menuProducts:hover {
+  background-color: #e3e3e3;
+}
+
+.bgMenu .wrapper-menu .menuProducts:hover p {
+  color: #4d4d4d;
+  text-decoration: underline;
+}
+
+.bgMenu .wrapper-menu .menuProducts:hover .listPhones {
+  display: block;
+}
+
+.bgMenu .wrapper-menu .menuProducts:hover .listPhones a {
+  display: inline-block;
+  font: 14px 'FiraSans-Medium', sans-serif;
+  text-decoration: none;
+}
+
+.bgMenu .wrapper-menu .menuProducts:hover .listPhones ul li:hover {
+  border-top: 1px solid #acacac;
+  border-bottom: 1px solid #acacac;
+  background-color: #e3e3e3;
+}
+
+.bgMenu .wrapper-menu .menuProducts ul {
+  background-color: #e3e3e3;
+}
+
+.bgMenu .wrapper-menu .menuProducts a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 130px;
+  height: 70px;
+  padding: 5px 0 5px 15px;
+}
+
+.bgMenu .wrapper-menu .menuProducts a p {
+  margin: 5px 5px;
+  color: #fff;
+  font: 16px 'FiraSans-Medium', sans-serif;
+}
+
+.bgMenu .wrapper-menu .menuProducts .iPhone a img {
+  width: 28px;
+  height: 48px;
+}
+
+.bgMenu .wrapper-menu .menuProducts .iPhone:hover {
+  background-color: #e3e3e3;
+}
+
+.bgMenu .wrapper-menu .menuProducts .iPade a img {
+  width: 36px;
+  height: 48px;
+}
+
+.bgMenu .wrapper-menu .menuProducts .Mac a img {
+  width: 55px;
+  height: 48px;
+}
+
+.bgMenu .wrapper-menu .menuProducts .Smartphone a img {
+  width: 30px;
+  height: 48px;
+}
+
+.bgMenu .wrapper-menu .menuProducts .Tablets a img {
+  width: 55px;
+  height: 48px;
+}
+
+.bgMenu .wrapper-menu .menuProducts .Computer {
+  width: 145px;
+}
+
+.bgMenu .wrapper-menu .menuProducts .Computer a {
+  width: 170px;
+}
+
+.bgMenu .wrapper-menu .menuProducts .Computer a r
+img {
+  width: 55px;
+  height: 48px;
+}
+
+.bgMenuResponsive {
+  display: none;
+}
+
+@media (max-width: 575.98px) {
+  .bgMenuResponsive {
+    display: block;
+    background-color: #ff6402;
+    height: 700px;
+    margin-top: 10px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .bgMenuResponsive-hide {
+    height: 0;
+  }
+  .bgMenuResponsive nav {
+    border-bottom: 1px solid #fff;
+  }
+  .bgMenuResponsive nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .bgMenuResponsive nav ul li {
+    text-align: center;
+    margin: 25px 0;
+  }
+  .bgMenuResponsive nav ul li:first-child {
+    margin-top: 5px;
+  }
+  .bgMenuResponsive nav ul li:last-child {
+    margin-bottom: 5px;
+  }
+  .bgMenuResponsive nav ul li a {
+    color: #fff;
+  }
+}
+
+.content .descriptionText h1 {
+  font: 40px 'FiraSans-Bold',sans-serif;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.content .descriptionText ul {
+  margin-top: 40px;
+}
+
+.content .descriptionText .descriptionImg li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.content .descriptionText .descriptionImg li img {
+  padding: 10px 0 10px 0;
+}
+
+.content .descriptionText .descriptionImg li p {
+  font: 20px 'FiraSans-Bold', sans-serif;
+  color: #4c4c4c;
+  padding: 10px 0 0 10px;
+}
+
+.content .backPhone {
+  position: relative;
+  z-index: -1;
+  top: -70px;
+  background: url("/img/backImage.png") no-repeat;
+  width: 1580px;
+  height: 845px;
 }
 /*# sourceMappingURL=style.css.map */

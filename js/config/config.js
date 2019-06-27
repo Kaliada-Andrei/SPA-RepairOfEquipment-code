@@ -1,9 +1,6 @@
 GjApp.config(["$routeProvider", function ($routeProvider) {
 
     $routeProvider
-        .when('/home', {
-            templateUrl: '/index.html'
-        })
         .when('/promotions', {
             templateUrl: '/views/promotions.html',
             controller: 'headerController'
@@ -29,7 +26,7 @@ GjApp.config(["$routeProvider", function ($routeProvider) {
             controller: 'headerController'
         })
         .otherwise({
-            redirectTo:''
+            redirectTo:'/promotions'
         });
 
 }]);
