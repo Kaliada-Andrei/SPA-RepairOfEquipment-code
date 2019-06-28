@@ -23,16 +23,6 @@
   src: url(/fonts/FiraSans-Light.ttf);
 }
 
-body {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-body p {
-  font: 20px "FiraSans-Light", sans-serif;
-}
-
 .popUpBg {
   width: 100%;
   min-height: 100%;
@@ -270,8 +260,8 @@ main.ng-enter.ng-enter-active {
   height: 2px;
   background-color: #fff;
   display: block;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .smallBtnMenu .menu-btn span::after {
@@ -443,33 +433,32 @@ main.ng-enter.ng-enter-active {
 }
 
 .bgMenu .wrapper-menu .menuProducts .Computer a {
-  width: 170px;
+  width: 150px;
 }
 
-.bgMenu .wrapper-menu .menuProducts .Computer a r
-img {
-  width: 55px;
-  height: 48px;
+.bgMenu .wrapper-menu .menuProducts .Computer a img {
+  width: 45px;
+  height: 38px;
 }
 
 .bgMenuResponsive {
   display: none;
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 768px) {
   .bgMenuResponsive {
     display: block;
     background-color: #ff6402;
-    height: 700px;
-    margin-top: 10px;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
-  .bgMenuResponsive-hide {
     height: 0;
+    margin-top: 10px;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    position: absolute;
   }
   .bgMenuResponsive nav {
     border-bottom: 1px solid #fff;
+    -webkit-transition: 1s;
+    transition: 1s;
   }
   .bgMenuResponsive nav ul {
     display: -webkit-box;
@@ -495,38 +484,98 @@ img {
   }
 }
 
-.content .descriptionText h1 {
+.content .offersSections {
+  margin-bottom: 30px;
+}
+
+.content .offersSections .offersText h1 {
   font: 40px 'FiraSans-Bold',sans-serif;
   text-align: center;
   padding-top: 100px;
 }
 
-.content .descriptionText ul {
+.content .offersSections .offersText ul {
   margin-top: 40px;
 }
 
-.content .descriptionText .descriptionImg li {
+.content .offersSections .offersText .offersGifs li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.content .descriptionText .descriptionImg li img {
+.content .offersSections .offersText .offersGifs li img {
   padding: 10px 0 10px 0;
 }
 
-.content .descriptionText .descriptionImg li p {
+.content .offersSections .offersText .offersGifs li p {
   font: 20px 'FiraSans-Bold', sans-serif;
   color: #4c4c4c;
   padding: 10px 0 0 10px;
 }
 
-.content .backPhone {
+.content .offersSections .backPhone {
   position: relative;
   z-index: -1;
   top: -70px;
   background: url("/img/backImage.png") no-repeat;
   width: 1580px;
   height: 845px;
+}
+
+.content .bgDescription {
+  background-color: #f5f5f5;
+  padding: 50px 0 50px 0;
+}
+
+.content .bgDescription ul {
+  margin-top: 30px;
+}
+
+.content .bgDescription ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content .bgDescription ul li .appleGif {
+  padding-left: 15px;
+}
+
+.content .bgDescription ul li p {
+  padding-left: 15px;
+}
+
+@media (max-width: 769px) {
+  .content .backPhone {
+    display: none;
+  }
+  .content .bgDescription .imacImg {
+    display: none;
+  }
+  .content .bgDescription h2 {
+    padding: 0 15px 0 15px;
+    text-align: center;
+  }
+  .content .bgDescription ul {
+    padding: 0 15px 0 15px;
+  }
+}
+
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body p {
+  font: 20px "FiraSans-Light", sans-serif;
+}
+
+body h2 {
+  font: 30px 'FiraSans-Bold',sans-serif;
 }
 /*# sourceMappingURL=style.css.map */

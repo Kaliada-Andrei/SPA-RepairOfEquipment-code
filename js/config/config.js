@@ -3,7 +3,7 @@ GjApp.config(["$routeProvider", function ($routeProvider) {
     $routeProvider
         .when('/promotions', {
             templateUrl: '/views/promotions.html',
-            controller: 'headerController'
+            controller: ''
         })
         .when('/guarantees', {
             templateUrl: '',

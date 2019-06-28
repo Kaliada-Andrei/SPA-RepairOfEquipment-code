@@ -125,11 +125,11 @@
       .Computer {
         width: 145px;
         a {
-          width: 170px;r
+          width: 150px;
 
           img {
-            width: 55px;
-            height: 48px;
+            width: 45px;
+            height: 38px;
           }
         }
       }
@@ -141,21 +141,19 @@
   display: none;
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 768px) {
 
   .bgMenuResponsive{
     display: block;
     background-color: #ff6402;
-    height: 700px;
+    height: 0;
     margin-top: 10px;
-    transition: 1s;
-
-    &-hide{
-      height: 0;
-    }
+    transition: 0.2s;
+    position: absolute;
 
     nav{
       border-bottom:1px solid #fff;
+      transition: 1s;
       ul{
         display:flex;
         flex-direction: column;
@@ -181,4 +179,3 @@
   }
 
 }
-

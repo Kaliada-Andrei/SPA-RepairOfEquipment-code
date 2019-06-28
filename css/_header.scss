@@ -5,16 +5,6 @@
 //   overflow-x: hidden;
 // }
 
-body
-{
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-  p{
-    font:20px "FiraSans-Light", sans-serif;
-  }
-}
-
 .popUpBg {
   width: 100%;
   min-height: 100%;
@@ -245,7 +235,7 @@ main.ng-enter.ng-enter-active {
         height: 2px;
         background-color: #fff;
         display: block;
-        transition: 0.5s;
+        transition: 0.3s;
 
       }
 
